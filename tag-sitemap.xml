@@ -3,6 +3,125 @@
 
 
     <url>
+        <loc>https://sungmanhan.github.io/tags/%EC%98%88%EC%95%BD%EC%96%B4/</loc>
+        <lastmod>2019-06-23T13:41:44.955Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/naming-convention/</loc>
+        <lastmod>2019-06-23T13:41:44.955Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/%EB%B3%80%EC%88%98/</loc>
+        <lastmod>2019-06-23T13:41:44.955Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/%EA%B0%95%EC%A0%9C-%ED%83%80%EC%9E%85-%EB%B3%80%ED%99%98/</loc>
+        <lastmod>2019-06-23T13:37:58.673Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/%EC%9E%90%EB%8F%99-%ED%83%80%EC%9E%85-%EB%B3%80%ED%99%98/</loc>
+        <lastmod>2019-06-23T13:37:58.673Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/%EC%9D%B4%ED%81%B4%EB%A6%BD%EC%8A%A4/</loc>
+        <lastmod>2019-06-23T13:36:39.686Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/perspective/</loc>
+        <lastmod>2019-06-23T13:36:39.686Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/%EC%8B%A4%ED%96%89%EB%AC%B8/</loc>
+        <lastmod>2019-06-23T13:34:39.644Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/%EC%84%B8%EB%AF%B8%EC%BD%9C%EB%A1%A0/</loc>
+        <lastmod>2019-06-23T13:34:39.644Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/%EC%A3%BC%EC%84%9D/</loc>
+        <lastmod>2019-06-23T13:34:39.644Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/%EC%86%8C%EC%8A%A4-%EB%B6%84%EC%84%9D/</loc>
+        <lastmod>2019-06-23T13:32:08.170Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/java-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EC%86%8C%EC%8A%A4-%EB%B6%84%EC%84%9D/</loc>
+        <lastmod>2019-06-23T13:32:08.170Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/main-method/</loc>
+        <lastmod>2019-06-23T13:32:08.170Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/java-main/</loc>
+        <lastmod>2019-06-23T13:32:08.170Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EA%B0%9C%EB%B0%9C-%EC%88%9C%EC%84%9C/</loc>
+        <lastmod>2019-06-23T13:31:33.318Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/Java-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EA%B0%9C%EB%B0%9C-%EC%88%9C%EC%84%9C/</loc>
+        <lastmod>2019-06-23T13:31:33.318Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/%EA%B0%9C%EB%B0%9C-%EC%88%9C%EC%84%9C/</loc>
+        <lastmod>2019-06-23T13:31:33.318Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sungmanhan.github.io/tags/Java/</loc>
         <lastmod>2019-06-23T13:20:48.499Z</lastmod>
         <changefreq>weekly</changefreq>

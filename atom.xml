@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sungmanhan.github.io/"/>
-  <updated>2019-06-23T13:20:38.791Z</updated>
+  <updated>2019-06-23T13:41:44.955Z</updated>
   <id>https://sungmanhan.github.io/</id>
   
   <author>
@@ -15,6 +15,195 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java Study 10</title>
+    <link href="https://sungmanhan.github.io/2019/06/23/Java-Study-10/"/>
+    <id>https://sungmanhan.github.io/2019/06/23/Java-Study-10/</id>
+    <published>2019-06-23T13:38:12.000Z</published>
+    <updated>2019-06-23T13:41:44.955Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="변수"><a href="#변수" class="headerlink" title="변수"></a>변수</h3><h4 id="변수란"><a href="#변수란" class="headerlink" title="변수란?"></a>변수란?</h4><p> 변수(Variable)란, 하나의 값을 저장할 수 있는 메모리 상의 공간을 말한다.</p><img src="/2019/06/23/Java-Study-10/variable_img01.jpg" title="변수 설명 사진"><p>변수는 값을 저장할 수 있는 메모리 공간을 의미한다.<br>변수란 이름을 갖게 된이유는 프로그램에 의해서 수시로 값이 변동될 수 있기 때문이다.</p><p>변수에는 복수 개의 값을 저장할 수 없고,<br>하나의 값만 저장할 수 있다.<br>그리고 변수에는 다양한 타입의 값을 저장할 수 없고,<br>한 가지 타입만 정의하여 사용할 수 있다.</p><figure class="highlight java"><figcaption><span>변수의 선언</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> age; <span class="comment">// 정수(int)값을 저장할 수 있는 age변수를 선언</span></span><br><span class="line"><span class="keyword">double</span> value; <span class="comment">// 실수(dobule) 값을 저장할 수 있는 value 변수를 선언</span></span><br></pre></td></tr></table></figure><p>변수를 사용하기 위해서는 먼저 변수를 선언해야 한다.<br>어떤 타입(행태)의 값을 저장할 것이며,<br>어떤 변수 명을 사용할 것인지 정해야 한다.</p><p>그리고 같은 타입의 변수는 콤마(,)를 이용해서 한꺼번에 선언할 수 있다.</p><figure class="highlight java"><figcaption><span>동시 선언</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x,y,z;</span><br></pre></td></tr></table></figure><p>하지만 위의 선언방법은 다른 개발자가 봤을 때,<br>명확하게 볼 수 없기 때문에 각각 선언을 해주는 것이 좋다.</p><p>그리고 변수 명(이름)은 메모리(JVM이 확보한 메모리 공간) 주소에 붙여진 이름이다.</p><img src="/2019/06/23/Java-Study-10/variable_in_memory.jpg" title="메모리 이름설명 사진"><p>프로그램은 변수 이름을 통해서 메모리 주소를 접근하고,<br>그곳에 값을 저장하거나 그곳에 있는 값을 읽는다.</p><hr><h3 id="명명-규칙"><a href="#명명-규칙" class="headerlink" title="명명 규칙"></a>명명 규칙</h3><p> 변수 이름은 자바 언어에서 정한 명명 규칙(Naming convention)을 따라야 한다.</p><table><thead><tr><th>작성 규칙</th><th>예</th></tr></thead><tbody><tr><td>첫번째 글자는 문자이거나 ‘$’,’_’여야 하고 숫자로 시작할 수 없다.(필수)</td><td>가능 : price, $price, _companyName<br>불가능 : 1v, @speed, $#value</td></tr><tr><td>영어 대소문자가 구분된다.(필수)</td><td>firstname과 firstName은 다른 변수이다.첫문자는 영어 소문자로 시작하되, 다른 단어가 붙을 경우 첫자를 대문자로 한다.(관례)<br>maxSpeed,firstName,carBodyColor 등</td></tr><tr><td>문자 수(길이)는 제한은 없다.</td><td>너무 길면 다른 개발자가 보기 힘들다.</td></tr><tr><td>자바 예약어는 사용할 수 없다.(필수)</td><td>아래 사진 참고</td></tr></tbody></table><h3 id="예약어"><a href="#예약어" class="headerlink" title="예약어"></a>예약어</h3><p> Java는 예약어들로 변수 이름을 지정하면 컴파일 에러가 발생하기 때문에 주의해야 한다.</p><img src="/2019/06/23/Java-Study-10/reserved_words.jpg" title="예약어_사진"><p>개발자는 변수 명을 보고,<br>이 변수가 어떤 값을 저장하고 있는지 쉽게 알 수 있도록<br>의미 있는 변수 명을 지어주는 것이 좋다(영어 명사).<br>변수 이름은 길이는 프로그램 실행과는<br>무관하기 때문에 충분히 길어도 상관없다.</p><p>그리고 개발자들 간에 지켜오는 관례가 있는데,<br>관례란 개발자들 간의 코드 작성 패턴을 공유하고자 하는<br>약속이기 때문에 가급적 지키는 편이 좋다.</p><p>변수 이름에 한글도 사용이 가능하지만 가급적이면,<br>한글을 포함하지 않는 것이 좋다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;변수&quot;&gt;&lt;a href=&quot;#변수&quot; class=&quot;headerlink&quot; title=&quot;변수&quot;&gt;&lt;/a&gt;변수&lt;/h3&gt;&lt;h4 id=&quot;변수란&quot;&gt;&lt;a href=&quot;#변수란&quot; class=&quot;headerlink&quot; title=&quot;변수란?&quot;&gt;&lt;/a&gt;변수란?&lt;/h4&gt;
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://sungmanhan.github.io/categories/Java/"/>
+    
+    
+      <category term="변수" scheme="https://sungmanhan.github.io/tags/%EB%B3%80%EC%88%98/"/>
+    
+      <category term="naming convention" scheme="https://sungmanhan.github.io/tags/naming-convention/"/>
+    
+      <category term="예약어" scheme="https://sungmanhan.github.io/tags/%EC%98%88%EC%95%BD%EC%96%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java Study 09</title>
+    <link href="https://sungmanhan.github.io/2019/06/23/Java-Study-09/"/>
+    <id>https://sungmanhan.github.io/2019/06/23/Java-Study-09/</id>
+    <published>2019-06-23T13:36:49.000Z</published>
+    <updated>2019-06-23T13:37:58.673Z</updated>
+    
+    <content type="html"><![CDATA[<p> 타입 변환이란 데이터 타입을 다른 데이터 타입으로 변환하는 것을 말한다. 큰 타입과 작은 타입의 구분은 사용하는 메모리의 크기이다.</p><h4 id="자동-타입-변환-Promotion"><a href="#자동-타입-변환-Promotion" class="headerlink" title="자동 타입 변환(Promotion)"></a>자동 타입 변환(Promotion)</h4><p>byte type(작은 타입) -&gt; int type(큰 타입)으로 변환하는 경우</p><h4 id="강제-타입-변환-Casting"><a href="#강제-타입-변환-Casting" class="headerlink" title="강제 타입 변환(Casting)"></a>강제 타입 변환(Casting)</h4><p>long type(큰 타입) -&gt; int type(작은 타입)으로 변환하는 경우</p><figure class="highlight java"><figcaption><span>PromotionExample.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 자동 타입 변환 Promotion 예제코드</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PromotionExample</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="keyword">byte</span> byteValue = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> intValue = byteValue;  <span class="comment">//int &lt;- byte</span></span><br><span class="line">System.out.println(intValue);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 유니코드란 전 세계적으로 사용하는 모든 문자 집합을 하나로 모은 것이다.</span></span><br><span class="line"><span class="comment">// Java의 경우 유니코드 기준으로 한다.</span></span><br><span class="line"><span class="keyword">char</span> charValue = <span class="string">'가'</span>;</span><br><span class="line">intValue = charValue; <span class="comment">//int &lt;- char</span></span><br><span class="line">System.out.println(<span class="string">"가의 유니코드 = "</span>+intValue);</span><br><span class="line"></span><br><span class="line">intValue = <span class="number">500</span>;</span><br><span class="line"><span class="keyword">long</span> longValue = intValue; <span class="comment">//long &lt;- int</span></span><br><span class="line">System.out.println(longValue);</span><br><span class="line"></span><br><span class="line">intValue = <span class="number">200</span>;</span><br><span class="line"><span class="keyword">double</span> doubleValue = intValue; <span class="comment">//double &lt;- int</span></span><br><span class="line">System.out.println(doubleValue);</span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">// .main</span></span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">// .class</span></span><br></pre></td></tr></table></figure><p>자동 타입 변환이 발생되면 변환 이전의 값과 변환 이후의 값은 동일하다. 즉, 변환 이전의 값은 변환 이후에도 손실 없이 그대로 보존이된다. 이것은 작은 그릇의 물을 큰 그릇으로 옮기더라도 물의 양은 변하지 않는다는 것과 유사하다.</p><hr><figure class="highlight java"><figcaption><span>CastingExample.Java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 강제 타입 변환 예제코드</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CastingExample</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> intValue = <span class="number">44032</span>;</span><br><span class="line"><span class="keyword">char</span> charValue = (<span class="keyword">char</span>) intValue; <span class="comment">// char &lt;- int</span></span><br><span class="line">System.out.println(charValue);</span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> longValue = <span class="number">500</span>;</span><br><span class="line">intValue = (<span class="keyword">int</span>) longValue;<span class="comment">//int &lt;- long</span></span><br><span class="line">System.out.println(intValue);</span><br><span class="line"></span><br><span class="line"><span class="keyword">double</span> doubleValue = <span class="number">3.14</span>;</span><br><span class="line">intValue = (<span class="keyword">int</span>) doubleValue; <span class="comment">//int &lt;- double</span></span><br><span class="line">System.out.println(intValue);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 값의 손실이 발생한다.</span></span><br><span class="line"><span class="comment">// 103029700을 이진수로 표현하면 00000110 00100100 00011100 00001010이다.</span></span><br><span class="line"><span class="comment">// 이 중 1byte 크기인 마지막 00001010인 값만 남기고 앞의 값은 보존되지 않아 값의 손실이 발생한다.</span></span><br><span class="line">intValue = <span class="number">103029770</span>;</span><br><span class="line"><span class="keyword">byte</span> byteValue = (<span class="keyword">byte</span>) intValue; <span class="comment">//byte &lt;- int</span></span><br><span class="line">System.out.println(byteValue);</span><br><span class="line">&#125;<span class="comment">// .main</span></span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">// .class</span></span><br></pre></td></tr></table></figure><p>강제 타입 변환에서 주의할 점은 사용자로부터 입력받은 값을 변환할 때 값의 손실이 발생하면 안된다는 것이다. 강제 타입 변한을 하기 전에 우선 안전하게 값이 보존될 수 있는지 검사하는 것이 좋다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt; 타입 변환이란 데이터 타입을 다른 데이터 타입으로 변환하는 것을 말한다. 큰 타입과 작은 타입의 구분은 사용하는 메모리의 크기이다.&lt;/p&gt;
+&lt;h4 id=&quot;자동-타입-변환-Promotion&quot;&gt;&lt;a href=&quot;#자동-타입-변환-Promotion&quot; 
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://sungmanhan.github.io/categories/Java/"/>
+    
+    
+      <category term="자동 타입 변환" scheme="https://sungmanhan.github.io/tags/%EC%9E%90%EB%8F%99-%ED%83%80%EC%9E%85-%EB%B3%80%ED%99%98/"/>
+    
+      <category term="강제 타입 변환" scheme="https://sungmanhan.github.io/tags/%EA%B0%95%EC%A0%9C-%ED%83%80%EC%9E%85-%EB%B3%80%ED%99%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java Study 08</title>
+    <link href="https://sungmanhan.github.io/2019/06/23/Java-Study-08/"/>
+    <id>https://sungmanhan.github.io/2019/06/23/Java-Study-08/</id>
+    <published>2019-06-23T13:36:08.000Z</published>
+    <updated>2019-06-23T13:36:39.686Z</updated>
+    
+    <content type="html"><![CDATA[<p>퍼스펙티브(Perspective)는 이클립스에서 프로젝트를 개발할 때 유용하게 사용하는 view들을 묶어 놓은 것을 말한다.</p><p>Java Perspective에서 제일 많인 사용하는 뷰는 프로젝트를 관리하고, 자바 소스 파일을 생성 및 삭제하는 작업을 하는 Package Explorer View이다.</p><p>그리고 프로그램에서 콘솔로 출력하는 내용을 보여주는 Console view도 많이 사용된다.</p><img src="/2019/06/23/Java-Study-08/perpective_view.jpg" title="perpective_view">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;퍼스펙티브(Perspective)는 이클립스에서 프로젝트를 개발할 때 유용하게 사용하는 view들을 묶어 놓은 것을 말한다.&lt;/p&gt;
+&lt;p&gt;Java Perspective에서 제일 많인 사용하는 뷰는 프로젝트를 관리하고, 자바 소스 파일을 생성 및 
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://sungmanhan.github.io/categories/Java/"/>
+    
+    
+      <category term="perspective" scheme="https://sungmanhan.github.io/tags/perspective/"/>
+    
+      <category term="이클립스" scheme="https://sungmanhan.github.io/tags/%EC%9D%B4%ED%81%B4%EB%A6%BD%EC%8A%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java Study 07</title>
+    <link href="https://sungmanhan.github.io/2019/06/23/Java-Study-07/"/>
+    <id>https://sungmanhan.github.io/2019/06/23/Java-Study-07/</id>
+    <published>2019-06-23T13:26:41.000Z</published>
+    <updated>2019-06-23T13:34:39.644Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th>문법</th><th>설명</th></tr></thead><tbody><tr><td>//</td><td>//부터 라인 끝까지 주석으로 처리 (행 주석)</td></tr><tr><td>/**/</td><td>/<em>와 </em>/사이에 있는 모든 범위를 주석으로 처리 (범위 주석)</td></tr></tbody></table><p>주석은 프로그램 실행과 상관없이 코드에 설명을 붙일 수 있다. 컴파일 과정에서 주석은 무시되고 실행문만 바이트 코드로 번역된다.</p><p>따라서 주석을 많이 작성한다고 해서 전체 프로그램의 크기가 커지는 것이 아니므로, 가급적 코드의 설명이 필요한 부분에 적절하게 주석을 달아 두는 것이 좋다.</p><p>Hello.java 파일에 주석을 추가한 경우</p><figure class="highlight java"><figcaption><span>Hello.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">작성자 : 한성만</span></span><br><span class="line"><span class="comment">작성일 : 2018-08-19</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"Hello world!"</span>); <span class="comment">// 콘솔에 출력하는 실행문        </span></span><br><span class="line"></span><br><span class="line">    &#125;<span class="comment">// .main</span></span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">// .class</span></span><br></pre></td></tr></table></figure><p>실행문은 변수 선언, 값 저장, 메소드 호출에 해당하는 코드를 말한다.실행문을 작성할 때 주의할 점은 실행문의 마직막에 반드시 세미콜론(;)을 붙여서 실행문이 끝났음을 표시해주어야 한다.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int x = 1;               // 변수 x를 선언하고 정수형 리터럴 1을 저장</span><br><span class="line">int y = 2;               // 변수 y를 선언하고 정수형 리터럴 2을 저장</span><br><span class="line">int result = x + y;      // 변수 result를 선언하고 변수 x와 y를 더한 값을 저장</span><br></pre></td></tr></table></figure><p>컴파일러는 세미콜론(;)이 나올 때까지 실행문이 계속해서 연결된 것으로 보기 때문에 한 실행문이 여러 줄에 걸쳐 있어도 되고, 한 줄에 여러 개의 실행문이 있어도 된다.</p><p>예를 들어<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int x = 1;  int y = 2;</span><br><span class="line">int reuslt =</span><br><span class="line">x + y;</span><br></pre></td></tr></table></figure></p><p>위의 예시처럼 선언은 가능 하나 가능하면 코드는 다른 사람이 보기 쉽게 작성하는 것이 좋다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;문법&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;//&lt;/td&gt;
+&lt;td&gt;//부터 라인 끝까지 주석으로 처리 (행 주석)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/**/
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://sungmanhan.github.io/categories/Java/"/>
+    
+    
+      <category term="주석" scheme="https://sungmanhan.github.io/tags/%EC%A3%BC%EC%84%9D/"/>
+    
+      <category term="세미콜론" scheme="https://sungmanhan.github.io/tags/%EC%84%B8%EB%AF%B8%EC%BD%9C%EB%A1%A0/"/>
+    
+      <category term="실행문" scheme="https://sungmanhan.github.io/tags/%EC%8B%A4%ED%96%89%EB%AC%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java Study 06</title>
+    <link href="https://sungmanhan.github.io/2019/06/23/Java-Study-06/"/>
+    <id>https://sungmanhan.github.io/2019/06/23/Java-Study-06/</id>
+    <published>2019-06-23T13:26:00.000Z</published>
+    <updated>2019-06-23T13:32:08.170Z</updated>
+    
+    <content type="html"><![CDATA[<p>Java 실행 프로그램은 반드시 클래스(class) 블록과 main() 메소드(method) 블록으로 구성되어야 한다. 메소드 블록은 단독으로 작성될 수 없고 항상 클래스 블록 내무에서 작성되어야 한다.</p><p>클래스 : 필드 또는 메소드를 포함하는 블록<br>메소드 : 어떤 일을 처리하는 실행문들을 모아 놓은 블록</p><figure class="highlight java"><figcaption><span>Hello.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123; <span class="comment">// class 중괄호(브라킷) 블록 시작</span></span><br><span class="line">             <span class="comment">// Hello 는 클래스의 이름이며 Hello.java 파일과 같아야 한다.</span></span><br><span class="line">             <span class="comment">// 숫자로 시작할 수 없고, 공백을 포함해서도 안된다.</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// public static void main(String[] args) = method 블록을 제외한 메소드 선언 부분을 메소드 시그니처라 한다.</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123; <span class="comment">// main method 블록 시작</span></span><br><span class="line"></span><br><span class="line">    &#125; <span class="comment">// .main 블록 종료</span></span><br><span class="line"></span><br><span class="line">&#125; <span class="comment">// .class 블록 종료</span></span><br></pre></td></tr></table></figure><p>main()는 java.exe로 JVM을 구동시키면 제일 먼저 main() 메소드를 찾아서 실행시키기 때문이다. 그래서 main() 메소드를 프로그램 실행 진입점 (entry point : starting point)라고 한다.</p><p>만약 클래스 내부에 main() 메소드가 없거나 잘못 작성하는 경우 에러가 발생한다.</p><p><a href="https://coderanch.com/t/651716/certification/main-method-static-Java-throw" target="_blank" title="java main error" alt="Java 실행 시  main이  없는 경우 error 확인">main error 경우 확인</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Java 실행 프로그램은 반드시 클래스(class) 블록과 main() 메소드(method) 블록으로 구성되어야 한다. 메소드 블록은 단독으로 작성될 수 없고 항상 클래스 블록 내무에서 작성되어야 한다.&lt;/p&gt;
+&lt;p&gt;클래스 : 필드 또는 메소드를
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://sungmanhan.github.io/categories/Java/"/>
+    
+    
+      <category term="java main" scheme="https://sungmanhan.github.io/tags/java-main/"/>
+    
+      <category term="main method" scheme="https://sungmanhan.github.io/tags/main-method/"/>
+    
+      <category term="java 프로그램 소스 분석" scheme="https://sungmanhan.github.io/tags/java-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EC%86%8C%EC%8A%A4-%EB%B6%84%EC%84%9D/"/>
+    
+      <category term="소스 분석" scheme="https://sungmanhan.github.io/tags/%EC%86%8C%EC%8A%A4-%EB%B6%84%EC%84%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java Study 05</title>
+    <link href="https://sungmanhan.github.io/2019/06/23/Java-Study-05/"/>
+    <id>https://sungmanhan.github.io/2019/06/23/Java-Study-05/</id>
+    <published>2019-06-23T13:24:20.000Z</published>
+    <updated>2019-06-23T13:31:33.318Z</updated>
+    
+    <content type="html"><![CDATA[<p>java 소스 파일 작성 -&gt; 컴파일러(javac.exe)로 바이트 코드 파일(. class) 생성 -&gt; JVM 궁동 명령어 (java.exe)로 실행</p><p>자바 프로그램을 개발하기 위해서는 우선 파일 확장명이. java인 텍스트 파일을 생성하여 프로그램을 작성한다.</p><p>window key + r -&gt; cmd 실행</p><p>cmd로 해보는 이유는 개발자는 개발 툴에 종속이 되어서는 안 되기 때문이다.</p><p>cmd를 이용한 Hello.java 생성</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; mkdir app           // mkdir : c 드라이브에 app이라는 폴더를 생성한다. (생성전 위치는 c)</span><br><span class="line">&gt; cd app              // cd : 생성한 app 폴더로 이동</span><br><span class="line">&gt; notepad Hello.java  // notepad : 이동한 app 폴더에 Hello.java 파일 생성</span><br></pre></td></tr></table></figure><figure class="highlight java"><figcaption><span>Hello.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span></span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"Hello world!"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="소스-파일-작성-시-주의사항"><a href="#소스-파일-작성-시-주의사항" class="headerlink" title="소스 파일 작성 시 주의사항"></a>소스 파일 작성 시 주의사항</h4><p>1- 1라인에서 Hello의 H가 대문자로 작성되어야 한다(파일명과 대소문자가 동일해야 함)<br>2- 2라인에서 String의 S가 대문자로 작성되어야 함(참조형 타입, 뒤에서 설명 일단 이렇게 알고 넘어가자)<br>3- 3라인에서 System의 S가 대문자로 작성되어야 함 (OS가 제공하는 3가지 System.in / System.out / System.. err)<br>4- 3라인 끝에는 세미콜론(;)을 붙여준다.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; dir // dir : 현 위치에 생성된 파일리스트 조회</span><br><span class="line">      // 생성된 Hello.java 파일을 확인 가능</span><br><span class="line"></span><br><span class="line">&gt; javac Hello.java // 작성 완료된. java 소스 파일은 javac.exe로 컴파일해야 한다.</span><br></pre></td></tr></table></figure><p>컴파일에 성공되면 확장명이. class 바이트 코드 파일은 완전한 기계어가 아니므로 단독으로 실행할 수 없고 JVM을 통해 실행해야 한다.</p><p>JVM을 구동시키는 명령어는 java.exe 이다.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; java Hello      // .class 확장명을 제외한 이름을 입력해야 함</span><br></pre></td></tr></table></figure><img src="/2019/06/23/Java-Study-05/java_compil_process.jpg" title="컴파일 순서">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;java 소스 파일 작성 -&amp;gt; 컴파일러(javac.exe)로 바이트 코드 파일(. class) 생성 -&amp;gt; JVM 궁동 명령어 (java.exe)로 실행&lt;/p&gt;
+&lt;p&gt;자바 프로그램을 개발하기 위해서는 우선 파일 확장명이. java인 텍스
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://sungmanhan.github.io/categories/Java/"/>
+    
+    
+      <category term="개발 순서" scheme="https://sungmanhan.github.io/tags/%EA%B0%9C%EB%B0%9C-%EC%88%9C%EC%84%9C/"/>
+    
+      <category term="Java 프로그램 개발 순서" scheme="https://sungmanhan.github.io/tags/Java-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EA%B0%9C%EB%B0%9C-%EC%88%9C%EC%84%9C/"/>
+    
+      <category term="프로그램 개발 순서" scheme="https://sungmanhan.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EA%B0%9C%EB%B0%9C-%EC%88%9C%EC%84%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>Java Study 04</title>

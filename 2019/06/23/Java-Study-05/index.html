@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Java Study 05 | 일상개발</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="개발 순서,Java 프로그램 개발 순서,프로그램 개발 순서">
+    
+    <meta name="description" content="java 소스 파일 작성 -&amp;gt; 컴파일러(javac.exe)로 바이트 코드 파일(. class) 생성 -&amp;gt; JVM 궁동 명령어 (java.exe)로 실행 자바 프로그램을 개발하기 위해서는 우선 파일 확장명이. java인 텍스트 파일을 생성하여 프로그램을 작성한다. window key + r -&amp;gt; cmd 실행 cmd로 해보는 이유는 개발자는 개">
+<meta name="keywords" content="개발 순서,Java 프로그램 개발 순서,프로그램 개발 순서">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java Study 05">
+<meta property="og:url" content="https://sungmanhan.github.io/2019/06/23/Java-Study-05/index.html">
+<meta property="og:site_name" content="일상개발">
+<meta property="og:description" content="java 소스 파일 작성 -&amp;gt; 컴파일러(javac.exe)로 바이트 코드 파일(. class) 생성 -&amp;gt; JVM 궁동 명령어 (java.exe)로 실행 자바 프로그램을 개발하기 위해서는 우선 파일 확장명이. java인 텍스트 파일을 생성하여 프로그램을 작성한다. window key + r -&amp;gt; cmd 실행 cmd로 해보는 이유는 개발자는 개">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="https://sungmanhan.github.io/2019/06/23/Java-Study-05/java_compil_process.jpg">
+<meta property="og:updated_time" content="2019-06-23T13:31:33.318Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java Study 05">
+<meta name="twitter:description" content="java 소스 파일 작성 -&amp;gt; 컴파일러(javac.exe)로 바이트 코드 파일(. class) 생성 -&amp;gt; JVM 궁동 명령어 (java.exe)로 실행 자바 프로그램을 개발하기 위해서는 우선 파일 확장명이. java인 텍스트 파일을 생성하여 프로그램을 작성한다. window key + r -&amp;gt; cmd 실행 cmd로 해보는 이유는 개발자는 개">
+<meta name="twitter:image" content="https://sungmanhan.github.io/2019/06/23/Java-Study-05/java_compil_process.jpg">
+    
+    <link rel="canonical" href="https://sungmanhan.github.io/2019/06/23/java-study-05/">
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    <link rel="stylesheet" href="/css/etc.css">
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">홈</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="검색">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '포스트',
+            PAGES: 'Pages',
+            CATEGORIES: '카테고리',
+            TAGS: '태그',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Java/">Java</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Java-Study-05" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Java Study 05
+        </h1>
+         <div class="article-subposttitle"> &nbsp# Java 프로그램 개발 순서 </div> 
+    
+
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/06/23/Java-Study-05/" class="article-date">
+            <time datetime="2019-06-23T13:24:20.000Z" itemprop="datePublished">2019-06-23</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Java-프로그램-개발-순서/">Java 프로그램 개발 순서</a>, <a class="tag-link" href="/tags/개발-순서/">개발 순서</a>, <a class="tag-link" href="/tags/프로그램-개발-순서/">프로그램 개발 순서</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>java 소스 파일 작성 -&gt; 컴파일러(javac.exe)로 바이트 코드 파일(. class) 생성 -&gt; JVM 궁동 명령어 (java.exe)로 실행</p>
+<p>자바 프로그램을 개발하기 위해서는 우선 파일 확장명이. java인 텍스트 파일을 생성하여 프로그램을 작성한다.</p>
+<p>window key + r -&gt; cmd 실행</p>
+<p>cmd로 해보는 이유는 개발자는 개발 툴에 종속이 되어서는 안 되기 때문이다.</p>
+<p>cmd를 이용한 Hello.java 생성</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; mkdir app           // mkdir : c 드라이브에 app이라는 폴더를 생성한다. (생성전 위치는 c)</span><br><span class="line">&gt; cd app              // cd : 생성한 app 폴더로 이동</span><br><span class="line">&gt; notepad Hello.java  // notepad : 이동한 app 폴더에 Hello.java 파일 생성</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><figcaption><span>Hello.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span></span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"Hello world!"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="소스-파일-작성-시-주의사항"><a href="#소스-파일-작성-시-주의사항" class="headerlink" title="소스 파일 작성 시 주의사항"></a>소스 파일 작성 시 주의사항</h4><p>1- 1라인에서 Hello의 H가 대문자로 작성되어야 한다(파일명과 대소문자가 동일해야 함)<br>2- 2라인에서 String의 S가 대문자로 작성되어야 함(참조형 타입, 뒤에서 설명 일단 이렇게 알고 넘어가자)<br>3- 3라인에서 System의 S가 대문자로 작성되어야 함 (OS가 제공하는 3가지 System.in / System.out / System.. err)<br>4- 3라인 끝에는 세미콜론(;)을 붙여준다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; dir // dir : 현 위치에 생성된 파일리스트 조회</span><br><span class="line">      // 생성된 Hello.java 파일을 확인 가능</span><br><span class="line"></span><br><span class="line">&gt; javac Hello.java // 작성 완료된. java 소스 파일은 javac.exe로 컴파일해야 한다.</span><br></pre></td></tr></table></figure>
+<p>컴파일에 성공되면 확장명이. class 바이트 코드 파일은 완전한 기계어가 아니므로 단독으로 실행할 수 없고 JVM을 통해 실행해야 한다.</p>
+<p>JVM을 구동시키는 명령어는 java.exe 이다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; java Hello      // .class 확장명을 제외한 이름을 입력해야 함</span><br></pre></td></tr></table></figure>
+<img src="/2019/06/23/Java-Study-05/java_compil_process.jpg" title="컴파일 순서">
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://sungmanhan.github.io/2019/06/23/Java-Study-05/" data-id="cjx906gcc000n6ysylkp9xpcs" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Sungman Han"
+        },
+        "headline": "Java Study 05",
+        "image": "https://sungmanhan.github.io/2019/06/23/Java-Study-05/java_compil_process.jpg",
+        "keywords": "개발 순서 Java 프로그램 개발 순서 프로그램 개발 순서",
+        "genre": "Java",
+        "datePublished": "2019-06-23",
+        "dateCreated": "2019-06-23",
+        "dateModified": "2019-06-23",
+        "url": "https://sungmanhan.github.io/2019/06/23/Java-Study-05/",
+        "description": "java 소스 파일 작성 -&gt; 컴파일러(javac.exe)로 바이트 코드 파일(. class) 생성 -&gt; JVM 궁동 명령어 (java.exe)로 실행
+자바 프로그램을 개발하기 위해서는 우선 파일 확장명이. java인 텍스트 파일을 생성하여 프로그램을 작성한다.
+window key + r -&gt; cmd 실행
+cmd로 해보는 이유는 개발자는 개"
+        "wordCount": 297
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>팔로우:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/SungmanHan/SungmanHan.github.io" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/profile.php?id=100002890264687" target="_blank" rel="noopener">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://www.instagram.com/sungman_han/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/06/23/Java-Study-06/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">새로운</strong>
+        <p class="article-nav-title">
+        
+            Java Study 06
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/06/23/Java-Study-04/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">오래된</strong>
+        <p class="article-nav-title">Java Study 04</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">카테고리</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Github-hexo/">Github & hexo</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIP/">TIP</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">아카이브</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">6월 2019</a><span class="archive-list-count">16</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">태그 클라우드</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Disqus/" style="font-size: 10px;">Disqus</a> <a href="/tags/Dynamic-Loading/" style="font-size: 10px;">Dynamic Loading</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/JVM/" style="font-size: 10px;">JVM</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Java-프로그램-개발-순서/" style="font-size: 10px;">Java 프로그램 개발 순서</a> <a href="/tags/Multi-Thread/" style="font-size: 10px;">Multi Thread</a> <a href="/tags/busuanzi/" style="font-size: 10px;">busuanzi</a> <a href="/tags/counter/" style="font-size: 10px;">counter</a> <a href="/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo-counter/" style="font-size: 10px;">hexo counter</a> <a href="/tags/hexo-블로그/" style="font-size: 10px;">hexo 블로그</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/java-main/" style="font-size: 10px;">java main</a> <a href="/tags/java-path/" style="font-size: 10px;">java path</a> <a href="/tags/java-프로그램-소스-분석/" style="font-size: 10px;">java 프로그램 소스 분석</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a> <a href="/tags/main-method/" style="font-size: 10px;">main method</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/markdown-syntax/" style="font-size: 10px;">markdown syntax</a> <a href="/tags/naming-convention/" style="font-size: 10px;">naming convention</a> <a href="/tags/perspective/" style="font-size: 10px;">perspective</a> <a href="/tags/강제-타입-변환/" style="font-size: 10px;">강제 타입 변환</a> <a href="/tags/개발-순서/" style="font-size: 10px;">개발 순서</a> <a href="/tags/객체-지향/" style="font-size: 10px;">객체 지향</a> <a href="/tags/글쓰기-폼-수정/" style="font-size: 10px;">글쓰기 폼 수정</a> <a href="/tags/다양한-App-개발/" style="font-size: 10px;">다양한 App 개발</a> <a href="/tags/댓글/" style="font-size: 10px;">댓글</a> <a href="/tags/메모리-관리/" style="font-size: 10px;">메모리 관리</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/블로그-관리/" style="font-size: 10px;">블로그 관리</a> <a href="/tags/세미콜론/" style="font-size: 10px;">세미콜론</a> <a href="/tags/소셜-댓글/" style="font-size: 10px;">소셜 댓글</a> <a href="/tags/소스-분석/" style="font-size: 10px;">소스 분석</a> <a href="/tags/실행문/" style="font-size: 10px;">실행문</a> <a href="/tags/예약어/" style="font-size: 10px;">예약어</a> <a href="/tags/이식성/" style="font-size: 10px;">이식성</a> <a href="/tags/이클립스/" style="font-size: 10px;">이클립스</a> <a href="/tags/자동-타입-변환/" style="font-size: 10px;">자동 타입 변환</a> <a href="/tags/주석/" style="font-size: 10px;">주석</a> <a href="/tags/테마-적용/" style="font-size: 10px;">테마 적용</a> <a href="/tags/프로그램-개발-순서/" style="font-size: 10px;">프로그램 개발 순서</a> <a href="/tags/함수적-코딩/" style="font-size: 10px;">함수적 코딩</a>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <p>  &copy; 2019 Sungman Han
+                </p>
+                <p>
+                    Contact E-mail : hansung926@gmail.com
+                </p>
+                <p>
+                    <span id="busuanzi_container_site_pv">
+                      총 조회 : <span id="busuanzi_value_site_pv"></span> 회
+                    </span> |
+                    <span id="busuanzi_container_site_uv">
+                      총 방문자 : <span id="busuanzi_value_site_uv"></span> 명
+                    </span>
+                </p>
+
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+]
+
+        
+    
+    <script>
+    var disqus_shortname = 'hansungman';
+    
+    
+    var disqus_url = 'https://sungmanhan.github.io/2019/06/23/Java-Study-05/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Java Study 10 | 일상개발</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="변수,naming convention,예약어">
+    
+    <meta name="description" content="변수변수란? 변수(Variable)란, 하나의 값을 저장할 수 있는 메모리 상의 공간을 말한다.  변수는 값을 저장할 수 있는 메모리 공간을 의미한다.변수란 이름을 갖게 된이유는 프로그램에 의해서 수시로 값이 변동될 수 있기 때문이다. 변수에는 복수 개의 값을 저장할 수 없고,하나의 값만 저장할 수 있다.그리고 변수에는 다양한 타입의 값을 저장할 수 없고,">
+<meta name="keywords" content="변수,naming convention,예약어">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java Study 10">
+<meta property="og:url" content="https://sungmanhan.github.io/2019/06/23/Java-Study-10/index.html">
+<meta property="og:site_name" content="일상개발">
+<meta property="og:description" content="변수변수란? 변수(Variable)란, 하나의 값을 저장할 수 있는 메모리 상의 공간을 말한다.  변수는 값을 저장할 수 있는 메모리 공간을 의미한다.변수란 이름을 갖게 된이유는 프로그램에 의해서 수시로 값이 변동될 수 있기 때문이다. 변수에는 복수 개의 값을 저장할 수 없고,하나의 값만 저장할 수 있다.그리고 변수에는 다양한 타입의 값을 저장할 수 없고,">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="https://sungmanhan.github.io/2019/06/23/Java-Study-10/variable_img01.jpg">
+<meta property="og:updated_time" content="2019-06-23T13:41:44.955Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java Study 10">
+<meta name="twitter:description" content="변수변수란? 변수(Variable)란, 하나의 값을 저장할 수 있는 메모리 상의 공간을 말한다.  변수는 값을 저장할 수 있는 메모리 공간을 의미한다.변수란 이름을 갖게 된이유는 프로그램에 의해서 수시로 값이 변동될 수 있기 때문이다. 변수에는 복수 개의 값을 저장할 수 없고,하나의 값만 저장할 수 있다.그리고 변수에는 다양한 타입의 값을 저장할 수 없고,">
+<meta name="twitter:image" content="https://sungmanhan.github.io/2019/06/23/Java-Study-10/variable_img01.jpg">
+    
+    <link rel="canonical" href="https://sungmanhan.github.io/2019/06/23/java-study-10/">
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    <link rel="stylesheet" href="/css/etc.css">
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">홈</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="검색">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '포스트',
+            PAGES: 'Pages',
+            CATEGORIES: '카테고리',
+            TAGS: '태그',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Java/">Java</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Java-Study-10" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Java Study 10
+        </h1>
+         <div class="article-subposttitle"> &nbsp# 변수, 명명 규칙, 예약어 </div> 
+    
+
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/06/23/Java-Study-10/" class="article-date">
+            <time datetime="2019-06-23T13:38:12.000Z" itemprop="datePublished">2019-06-23</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/naming-convention/">naming convention</a>, <a class="tag-link" href="/tags/변수/">변수</a>, <a class="tag-link" href="/tags/예약어/">예약어</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h3 id="변수"><a href="#변수" class="headerlink" title="변수"></a>변수</h3><h4 id="변수란"><a href="#변수란" class="headerlink" title="변수란?"></a>변수란?</h4><p> 변수(Variable)란, 하나의 값을 저장할 수 있는 메모리 상의 공간을 말한다.</p>
+<img src="/2019/06/23/Java-Study-10/variable_img01.jpg" title="변수 설명 사진">
+<p>변수는 값을 저장할 수 있는 메모리 공간을 의미한다.<br>변수란 이름을 갖게 된이유는 프로그램에 의해서 수시로 값이 변동될 수 있기 때문이다.</p>
+<p>변수에는 복수 개의 값을 저장할 수 없고,<br>하나의 값만 저장할 수 있다.<br>그리고 변수에는 다양한 타입의 값을 저장할 수 없고,<br>한 가지 타입만 정의하여 사용할 수 있다.</p>
+<figure class="highlight java"><figcaption><span>변수의 선언</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> age; <span class="comment">// 정수(int)값을 저장할 수 있는 age변수를 선언</span></span><br><span class="line"><span class="keyword">double</span> value; <span class="comment">// 실수(dobule) 값을 저장할 수 있는 value 변수를 선언</span></span><br></pre></td></tr></table></figure>
+<p>변수를 사용하기 위해서는 먼저 변수를 선언해야 한다.<br>어떤 타입(행태)의 값을 저장할 것이며,<br>어떤 변수 명을 사용할 것인지 정해야 한다.</p>
+<p>그리고 같은 타입의 변수는 콤마(,)를 이용해서 한꺼번에 선언할 수 있다.</p>
+<figure class="highlight java"><figcaption><span>동시 선언</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x,y,z;</span><br></pre></td></tr></table></figure>
+<p>하지만 위의 선언방법은 다른 개발자가 봤을 때,<br>명확하게 볼 수 없기 때문에 각각 선언을 해주는 것이 좋다.</p>
+<p>그리고 변수 명(이름)은 메모리(JVM이 확보한 메모리 공간) 주소에 붙여진 이름이다.</p>
+<img src="/2019/06/23/Java-Study-10/variable_in_memory.jpg" title="메모리 이름설명 사진">
+<p>프로그램은 변수 이름을 통해서 메모리 주소를 접근하고,<br>그곳에 값을 저장하거나 그곳에 있는 값을 읽는다.</p>
+<hr>
+<h3 id="명명-규칙"><a href="#명명-규칙" class="headerlink" title="명명 규칙"></a>명명 규칙</h3><p> 변수 이름은 자바 언어에서 정한 명명 규칙(Naming convention)을 따라야 한다.</p>
+<table>
+<thead>
+<tr>
+<th>작성 규칙</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>첫번째 글자는 문자이거나 ‘$’,’_’여야 하고 숫자로 시작할 수 없다.(필수)</td>
+<td>가능 : price, $price, _companyName<br>불가능 : 1v, @speed, $#value</td>
+</tr>
+<tr>
+<td>영어 대소문자가 구분된다.(필수)</td>
+<td>firstname과 firstName은 다른 변수이다.첫문자는 영어 소문자로 시작하되, 다른 단어가 붙을 경우 첫자를 대문자로 한다.(관례)<br>maxSpeed,firstName,carBodyColor 등</td>
+</tr>
+<tr>
+<td>문자 수(길이)는 제한은 없다.</td>
+<td>너무 길면 다른 개발자가 보기 힘들다.</td>
+</tr>
+<tr>
+<td>자바 예약어는 사용할 수 없다.(필수)</td>
+<td>아래 사진 참고</td>
+</tr>
+</tbody>
+</table>
+<h3 id="예약어"><a href="#예약어" class="headerlink" title="예약어"></a>예약어</h3><p> Java는 예약어들로 변수 이름을 지정하면 컴파일 에러가 발생하기 때문에 주의해야 한다.</p>
+<img src="/2019/06/23/Java-Study-10/reserved_words.jpg" title="예약어_사진">
+<p>개발자는 변수 명을 보고,<br>이 변수가 어떤 값을 저장하고 있는지 쉽게 알 수 있도록<br>의미 있는 변수 명을 지어주는 것이 좋다(영어 명사).<br>변수 이름은 길이는 프로그램 실행과는<br>무관하기 때문에 충분히 길어도 상관없다.</p>
+<p>그리고 개발자들 간에 지켜오는 관례가 있는데,<br>관례란 개발자들 간의 코드 작성 패턴을 공유하고자 하는<br>약속이기 때문에 가급적 지키는 편이 좋다.</p>
+<p>변수 이름에 한글도 사용이 가능하지만 가급적이면,<br>한글을 포함하지 않는 것이 좋다.</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://sungmanhan.github.io/2019/06/23/Java-Study-10/" data-id="cjx906gcn00116ysy8l5a8o6s" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Sungman Han"
+        },
+        "headline": "Java Study 10",
+        "image": "https://sungmanhan.github.io/2019/06/23/Java-Study-10/variable_img01.jpg",
+        "keywords": "변수 naming convention 예약어",
+        "genre": "Java",
+        "datePublished": "2019-06-23",
+        "dateCreated": "2019-06-23",
+        "dateModified": "2019-06-23",
+        "url": "https://sungmanhan.github.io/2019/06/23/Java-Study-10/",
+        "description": "변수변수란? 변수(Variable)란, 하나의 값을 저장할 수 있는 메모리 상의 공간을 말한다.
+
+변수는 값을 저장할 수 있는 메모리 공간을 의미한다.변수란 이름을 갖게 된이유는 프로그램에 의해서 수시로 값이 변동될 수 있기 때문이다.
+변수에는 복수 개의 값을 저장할 수 없고,하나의 값만 저장할 수 있다.그리고 변수에는 다양한 타입의 값을 저장할 수 없고,"
+        "wordCount": 302
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>팔로우:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/SungmanHan/SungmanHan.github.io" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/profile.php?id=100002890264687" target="_blank" rel="noopener">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://www.instagram.com/sungman_han/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/06/23/Java-Study-09/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">오래된</strong>
+        <p class="article-nav-title">Java Study 09</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">카테고리</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Github-hexo/">Github & hexo</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIP/">TIP</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">아카이브</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">6월 2019</a><span class="archive-list-count">16</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">태그 클라우드</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Disqus/" style="font-size: 10px;">Disqus</a> <a href="/tags/Dynamic-Loading/" style="font-size: 10px;">Dynamic Loading</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/JVM/" style="font-size: 10px;">JVM</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Java-프로그램-개발-순서/" style="font-size: 10px;">Java 프로그램 개발 순서</a> <a href="/tags/Multi-Thread/" style="font-size: 10px;">Multi Thread</a> <a href="/tags/busuanzi/" style="font-size: 10px;">busuanzi</a> <a href="/tags/counter/" style="font-size: 10px;">counter</a> <a href="/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo-counter/" style="font-size: 10px;">hexo counter</a> <a href="/tags/hexo-블로그/" style="font-size: 10px;">hexo 블로그</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/java-main/" style="font-size: 10px;">java main</a> <a href="/tags/java-path/" style="font-size: 10px;">java path</a> <a href="/tags/java-프로그램-소스-분석/" style="font-size: 10px;">java 프로그램 소스 분석</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a> <a href="/tags/main-method/" style="font-size: 10px;">main method</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/markdown-syntax/" style="font-size: 10px;">markdown syntax</a> <a href="/tags/naming-convention/" style="font-size: 10px;">naming convention</a> <a href="/tags/perspective/" style="font-size: 10px;">perspective</a> <a href="/tags/강제-타입-변환/" style="font-size: 10px;">강제 타입 변환</a> <a href="/tags/개발-순서/" style="font-size: 10px;">개발 순서</a> <a href="/tags/객체-지향/" style="font-size: 10px;">객체 지향</a> <a href="/tags/글쓰기-폼-수정/" style="font-size: 10px;">글쓰기 폼 수정</a> <a href="/tags/다양한-App-개발/" style="font-size: 10px;">다양한 App 개발</a> <a href="/tags/댓글/" style="font-size: 10px;">댓글</a> <a href="/tags/메모리-관리/" style="font-size: 10px;">메모리 관리</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/블로그-관리/" style="font-size: 10px;">블로그 관리</a> <a href="/tags/세미콜론/" style="font-size: 10px;">세미콜론</a> <a href="/tags/소셜-댓글/" style="font-size: 10px;">소셜 댓글</a> <a href="/tags/소스-분석/" style="font-size: 10px;">소스 분석</a> <a href="/tags/실행문/" style="font-size: 10px;">실행문</a> <a href="/tags/예약어/" style="font-size: 10px;">예약어</a> <a href="/tags/이식성/" style="font-size: 10px;">이식성</a> <a href="/tags/이클립스/" style="font-size: 10px;">이클립스</a> <a href="/tags/자동-타입-변환/" style="font-size: 10px;">자동 타입 변환</a> <a href="/tags/주석/" style="font-size: 10px;">주석</a> <a href="/tags/테마-적용/" style="font-size: 10px;">테마 적용</a> <a href="/tags/프로그램-개발-순서/" style="font-size: 10px;">프로그램 개발 순서</a> <a href="/tags/함수적-코딩/" style="font-size: 10px;">함수적 코딩</a>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <p>  &copy; 2019 Sungman Han
+                </p>
+                <p>
+                    Contact E-mail : hansung926@gmail.com
+                </p>
+                <p>
+                    <span id="busuanzi_container_site_pv">
+                      총 조회 : <span id="busuanzi_value_site_pv"></span> 회
+                    </span> |
+                    <span id="busuanzi_container_site_uv">
+                      총 방문자 : <span id="busuanzi_value_site_uv"></span> 명
+                    </span>
+                </p>
+
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+]
+
+        
+    
+    <script>
+    var disqus_shortname = 'hansungman';
+    
+    
+    var disqus_url = 'https://sungmanhan.github.io/2019/06/23/Java-Study-10/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
