@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Java Study 03 | 일상개발</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Java,이식성,객체 지향,함수적 코딩,메모리 관리,다양한 App 개발,Multi Thread,Dynamic Loading">
+    
+    <meta name="description" content="1. 이식성이 높은 언어이식성이란 서로 다른 실행 환경을 가진 시스템 간에 프로그램을 옮겨 실행할 수 있는 것을 말한다. Java는 실행 환경인 JRE(Java Runtime Environment)이 설치되어 있는 모든 운영체제에서 실행이 가능하다. 2. 객체 지향 언어 객체 지행 프로그래밍 OOP (Object Oriented Programming)이란">
+<meta name="keywords" content="Java,이식성,객체 지향,함수적 코딩,메모리 관리,다양한 App 개발,Multi Thread,Dynamic Loading">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java Study 03">
+<meta property="og:url" content="https://sungmanhan.github.io/2019/06/23/Java-Study-03/index.html">
+<meta property="og:site_name" content="일상개발">
+<meta property="og:description" content="1. 이식성이 높은 언어이식성이란 서로 다른 실행 환경을 가진 시스템 간에 프로그램을 옮겨 실행할 수 있는 것을 말한다. Java는 실행 환경인 JRE(Java Runtime Environment)이 설치되어 있는 모든 운영체제에서 실행이 가능하다. 2. 객체 지향 언어 객체 지행 프로그래밍 OOP (Object Oriented Programming)이란">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2019-06-23T13:19:17.634Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java Study 03">
+<meta name="twitter:description" content="1. 이식성이 높은 언어이식성이란 서로 다른 실행 환경을 가진 시스템 간에 프로그램을 옮겨 실행할 수 있는 것을 말한다. Java는 실행 환경인 JRE(Java Runtime Environment)이 설치되어 있는 모든 운영체제에서 실행이 가능하다. 2. 객체 지향 언어 객체 지행 프로그래밍 OOP (Object Oriented Programming)이란">
+    
+    <link rel="canonical" href="https://sungmanhan.github.io/2019/06/23/java-study-03/">
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    <link rel="stylesheet" href="/css/etc.css">
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">홈</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="검색">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '포스트',
+            PAGES: 'Pages',
+            CATEGORIES: '카테고리',
+            TAGS: '태그',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Java-Concept/">Java Concept</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Java-Study-03" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Java Study 03
+        </h1>
+         <div class="article-subposttitle"> &nbsp# Java 의 특징 </div> 
+    
+
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/06/23/Java-Study-03/" class="article-date">
+            <time datetime="2019-06-23T13:14:48.000Z" itemprop="datePublished">2019-06-23</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Dynamic-Loading/">Dynamic Loading</a>, <a class="tag-link" href="/tags/Java/">Java</a>, <a class="tag-link" href="/tags/Multi-Thread/">Multi Thread</a>, <a class="tag-link" href="/tags/객체-지향/">객체 지향</a>, <a class="tag-link" href="/tags/다양한-App-개발/">다양한 App 개발</a>, <a class="tag-link" href="/tags/메모리-관리/">메모리 관리</a>, <a class="tag-link" href="/tags/이식성/">이식성</a>, <a class="tag-link" href="/tags/함수적-코딩/">함수적 코딩</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h4 id="1-이식성이-높은-언어"><a href="#1-이식성이-높은-언어" class="headerlink" title="1. 이식성이 높은 언어"></a>1. 이식성이 높은 언어</h4><p>이식성이란 서로 다른 실행 환경을 가진 시스템 간에 프로그램을 옮겨 실행할 수 있는 것을 말한다. Java는 실행 환경인 JRE(Java Runtime Environment)이 설치되어 있는 모든 운영체제에서 실행이 가능하다.</p>
+<h4 id="2-객체-지향-언어"><a href="#2-객체-지향-언어" class="headerlink" title="2. 객체 지향 언어"></a>2. 객체 지향 언어</h4><p> 객체 지행 프로그래밍 OOP (Object Oriented Programming)이란 프로그램을 개발하는 기법으로 부품에 해당하는 객체들을 먼저 만들고, 이것들을 하나씩 조립 및 연결해서 전체 프로그램을 완성하는 기법을 말한다. 이때 사용되는 언어를 객체 지향 언어라고 한다.</p>
+<p>Java는 객체 지향 언어가 가져야할 캡슐화, 상속, 다향성 기능을 완벽하게 지원하고 있다.</p>
+<h4 id="3-함수적-스타일-코딩을-지원"><a href="#3-함수적-스타일-코딩을-지원" class="headerlink" title="3. 함수적 스타일 코딩을 지원"></a>3. 함수적 스타일 코딩을 지원</h4><p> 함수적 프로그래밍은 대용량 데이터의 병렬 처리 그리고 이벤트 지향 프로그래밍을 위해 적합하다. 그래서 Java는 람다식 (Lambda Expressions)을 Java 8부터 지원한다. 람다식을 사용하면 컬렉션의 요소를 필터링, 매핑, 집게 처리하는데 쉬워지고, 코드가 매우 간결해진다.</p>
+<h4 id="4-메모리를-자동으로-관리"><a href="#4-메모리를-자동으로-관리" class="headerlink" title="4. 메모리를 자동으로 관리"></a>4. 메모리를 자동으로 관리</h4><p> 객체 생성 시 자동적으로 메모리 영역을 찾아서 할당하고, 사용이 완료되면 쓰레기 수집기 (Garbage Collector)를 실행시켜 자동적으로 사용하지 않는 객체를 제거시켜준다. 따라서 개발자의는 메모리 관리의 수고스러움을 덜고, 핵심 기능 코드 작성에 집중할 수 있다.</p>
+<h4 id="5-다양한-애플리케이션-개발-가능"><a href="#5-다양한-애플리케이션-개발-가능" class="headerlink" title="5. 다양한 애플리케이션 개발 가능"></a>5. 다양한 애플리케이션 개발 가능</h4><p> Java는 다양한 운영체제 OS(Operating System)에서 실행되는 프로그램을 개발할 수 있다. Java는 다양한 OS에서 사용할 수 있는 개발 도구와 API를 묶어 Edition 형태로 정의하고 있다.</p>
+<pre><code>1. Java SE (Standard Edition) - 기본 에디션
+</code></pre><p>Java SE는 Java program들이 공통적으로 사용하는 JVM (Java Virtual Machine)와 개발에 필수적인 도구와 Library API를 정의한다. 클라이언트와 서버 프로그램에 상관없이 Java program을 개발하고 실행하기 위해서는 반드시 Java SE 구현체인 JDK (Java Development Kit)를 설치해야 한다.</p>
+<pre><code>2. Java EE (Enterpirse Edition) - 서버용 애플리케이션 개발 에디션
+</code></pre><p>Java EE는 분산 환경 ( 네트워크, 인터넷)에서 서버용 애플리케이션을 개발하기 ㅜ이한 도구 및 라이브러리 API를 정의한다. Servlet/JSP, EJB (Enterprise Java Bean), XML Web Services 등이 있다.</p>
+<h4 id="6-Multi-Thread"><a href="#6-Multi-Thread" class="headerlink" title="6. Multi-Thread"></a>6. Multi-Thread</h4><p>하나의 프로그램이 동시에 여러 가지 작업을 처리해야 할 경우와 대용량 작업을 빨리 처리하기 위해 서브 작읍로 분리해서 병렬 처리하려면 멀티 스레드 프로그래밍이 필요하다. Java는 스레드 생성 및 제어와 관련된 라이브러리 API를 제공하기 있기 때문에 실행되는 운영체제 상관없이 멀티 스레드를 쉽게 구현한 수 있다.</p>
+<h4 id="7-Dynamic-Loading"><a href="#7-Dynamic-Loading" class="headerlink" title="7. Dynamic Loading"></a>7. Dynamic Loading</h4><p>Java는 객체가 필요한 시점에 클래스를 동적로딩해서 객체를 생성한다. 또한 개발 오나료 후 유지보수(수정)가 발생하더라도 해당 클래스만 수정하면 되므로 전체 애플리케이션을 단시 컴파일할 필요가 없다. 따라 유지보수를 쉽고 빠르게 진행할 수 있다.</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://sungmanhan.github.io/2019/06/23/Java-Study-03/" data-id="cjx8zbtc8000ftysy02t0ncco" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Sungman Han"
+        },
+        "headline": "Java Study 03",
+        "image": "https://sungmanhan.github.io",
+        "keywords": "Java 이식성 객체 지향 함수적 코딩 메모리 관리 다양한 App 개발 Multi Thread Dynamic Loading",
+        "genre": "Java Concept",
+        "datePublished": "2019-06-23",
+        "dateCreated": "2019-06-23",
+        "dateModified": "2019-06-23",
+        "url": "https://sungmanhan.github.io/2019/06/23/Java-Study-03/",
+        "description": "1. 이식성이 높은 언어이식성이란 서로 다른 실행 환경을 가진 시스템 간에 프로그램을 옮겨 실행할 수 있는 것을 말한다. Java는 실행 환경인 JRE(Java Runtime Environment)이 설치되어 있는 모든 운영체제에서 실행이 가능하다.
+2. 객체 지향 언어 객체 지행 프로그래밍 OOP (Object Oriented Programming)이란 "
+        "wordCount": 374
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>팔로우:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/SungmanHan/SungmanHan.github.io" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/profile.php?id=100002890264687" target="_blank" rel="noopener">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://www.instagram.com/sungman_han/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/06/23/Java-Study-04/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">새로운</strong>
+        <p class="article-nav-title">
+        
+            Java Study 04
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/06/23/Java-Study-02/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">오래된</strong>
+        <p class="article-nav-title">Java Study 02</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">카테고리</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Github-hexo/">Github & hexo</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java-Concept/">Java Concept</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIP/">TIP</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">아카이브</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">6월 2019</a><span class="archive-list-count">10</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">태그 클라우드</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Disqus/" style="font-size: 10px;">Disqus</a> <a href="/tags/Dynamic-Loading/" style="font-size: 10px;">Dynamic Loading</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/JVM/" style="font-size: 10px;">JVM</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Multi-Thread/" style="font-size: 10px;">Multi Thread</a> <a href="/tags/busuanzi/" style="font-size: 10px;">busuanzi</a> <a href="/tags/counter/" style="font-size: 10px;">counter</a> <a href="/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo-counter/" style="font-size: 10px;">hexo counter</a> <a href="/tags/hexo-블로그/" style="font-size: 10px;">hexo 블로그</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/java-path/" style="font-size: 10px;">java path</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/markdown-syntax/" style="font-size: 10px;">markdown syntax</a> <a href="/tags/객체-지향/" style="font-size: 10px;">객체 지향</a> <a href="/tags/글쓰기-폼-수정/" style="font-size: 10px;">글쓰기 폼 수정</a> <a href="/tags/다양한-App-개발/" style="font-size: 10px;">다양한 App 개발</a> <a href="/tags/댓글/" style="font-size: 10px;">댓글</a> <a href="/tags/메모리-관리/" style="font-size: 10px;">메모리 관리</a> <a href="/tags/블로그-관리/" style="font-size: 10px;">블로그 관리</a> <a href="/tags/소셜-댓글/" style="font-size: 10px;">소셜 댓글</a> <a href="/tags/이식성/" style="font-size: 10px;">이식성</a> <a href="/tags/테마-적용/" style="font-size: 10px;">테마 적용</a> <a href="/tags/함수적-코딩/" style="font-size: 10px;">함수적 코딩</a>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <p>  &copy; 2019 Sungman Han
+                </p>
+                <p>
+                    Contact E-mail : hansung926@gmail.com
+                </p>
+                <p>
+                    <span id="busuanzi_container_site_pv">
+                      총 조회 : <span id="busuanzi_value_site_pv"></span> 회
+                    </span> |
+                    <span id="busuanzi_container_site_uv">
+                      총 방문자 : <span id="busuanzi_value_site_uv"></span> 명
+                    </span>
+                </p>
+
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+]
+
+        
+    
+    <script>
+    var disqus_shortname = 'hansungman';
+    
+    
+    var disqus_url = 'https://sungmanhan.github.io/2019/06/23/Java-Study-03/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

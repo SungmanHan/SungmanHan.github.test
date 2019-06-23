@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Java Study 02 | 일상개발</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Java">
+    
+    <meta name="description" content="컴퓨터가 이해할 수 있는 기계어(machine language)는 0과 1로 이루어진 이진 코드이다. 이 언어는 사람이 이해하기 힘들다. 그렇기 때문에 사람의 언어와 기계어의 가교 역할을 하는 프로그래밍 언어가 필요하다. 사람의 측면에서 프로그래밍 언어는 고급 언어와 저급 언어로 구분된다. 사람이 이해할 수 있는 언어에 가까우면 고급 언어(High Leve">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java Study 02">
+<meta property="og:url" content="https://sungmanhan.github.io/2019/06/23/Java-Study-02/index.html">
+<meta property="og:site_name" content="일상개발">
+<meta property="og:description" content="컴퓨터가 이해할 수 있는 기계어(machine language)는 0과 1로 이루어진 이진 코드이다. 이 언어는 사람이 이해하기 힘들다. 그렇기 때문에 사람의 언어와 기계어의 가교 역할을 하는 프로그래밍 언어가 필요하다. 사람의 측면에서 프로그래밍 언어는 고급 언어와 저급 언어로 구분된다. 사람이 이해할 수 있는 언어에 가까우면 고급 언어(High Leve">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="https://sungmanhan.github.io/2019/06/23/Java-Study-02/java_compiler.jpg">
+<meta property="og:updated_time" content="2019-06-23T13:14:17.827Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java Study 02">
+<meta name="twitter:description" content="컴퓨터가 이해할 수 있는 기계어(machine language)는 0과 1로 이루어진 이진 코드이다. 이 언어는 사람이 이해하기 힘들다. 그렇기 때문에 사람의 언어와 기계어의 가교 역할을 하는 프로그래밍 언어가 필요하다. 사람의 측면에서 프로그래밍 언어는 고급 언어와 저급 언어로 구분된다. 사람이 이해할 수 있는 언어에 가까우면 고급 언어(High Leve">
+<meta name="twitter:image" content="https://sungmanhan.github.io/2019/06/23/Java-Study-02/java_compiler.jpg">
+    
+    <link rel="canonical" href="https://sungmanhan.github.io/2019/06/23/java-study-02/">
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+    <link rel="stylesheet" href="/css/etc.css">
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">홈</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="검색">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '포스트',
+            PAGES: 'Pages',
+            CATEGORIES: '카테고리',
+            TAGS: '태그',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Java/">Java</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Java-Study-02" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Java Study 02
+        </h1>
+         <div class="article-subposttitle"> &nbsp# 프로그래밍 언어란? </div> 
+    
+
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/06/23/Java-Study-02/" class="article-date">
+            <time datetime="2019-06-23T13:10:00.000Z" itemprop="datePublished">2019-06-23</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Java/">Java</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>컴퓨터가 이해할 수 있는 기계어(machine language)는 0과 1로 이루어진 이진 코드이다. 이 언어는 사람이 이해하기 힘들다. 그렇기 때문에 사람의 언어와 기계어의 가교 역할을 하는 프로그래밍 언어가 필요하다.</p>
+<p>사람의 측면에서 프로그래밍 언어는 고급 언어와 저급 언어로 구분된다. 사람이 이해할 수 있는 언어에 가까우면 고급 언어(High Level Language)라 하며, 기계어에 가까운 언어를 저급 언어(Low Level Language)라 한다. 저급 언어는 사람이 쉽게 이해할 수 없기 때문에 배우기가 매우 까다롭다.</p>
+<p>사람이 고급 언어로 작성한 소스(source code)는 컴퓨터가 바로 이해할 수 없기 때문에 컴파일(compile) 과정을 통해서 컴퓨터가 이해할 수 있는 0과 1로 이루어진 기계어로 변환한 후 컴퓨터가 이해할 수 있게 된다.</p>
+<p>일반 적으로 프로그램(program)이란 컴퓨터에서 특정 목적을 수행하기 위해 프로그래밍 언어로 작성된 소스를 기계어로 번역한 것을 의미한다.</p>
+<img src="/2019/06/23/Java-Study-02/java_compiler.jpg" title="컴파일">
+<p>Java는 1991년도 Sun Engineer들에 의해서 고안된 Oak라는 언어에서 시작, 초기. Oak는 가전제품에 사용될 목적이었다.</p>
+<p>그리고 1995년도에 처음 Sun Microsystems에서 Java 언어를 발표 지금까지 전세계적으로 사용중이다. 1999년도부터 인터넷이 활성화되면서 웹 애플리케이션 구축용 언어로 Java가 급부상했다.</p>
+<p>이유는 다양한 서버 운영체제에서 단 한 번의 작성으로 모든 곳에서 실행 가능한 언어가 Java 뿐이었기 때문이다.</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://sungmanhan.github.io/2019/06/23/Java-Study-02/" data-id="cjx8zbtc6000btysy4rnhj58l" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Sungman Han"
+        },
+        "headline": "Java Study 02",
+        "image": "https://sungmanhan.github.io/2019/06/23/Java-Study-02/java_compiler.jpg",
+        "keywords": "Java",
+        "genre": "Java",
+        "datePublished": "2019-06-23",
+        "dateCreated": "2019-06-23",
+        "dateModified": "2019-06-23",
+        "url": "https://sungmanhan.github.io/2019/06/23/Java-Study-02/",
+        "description": "컴퓨터가 이해할 수 있는 기계어(machine language)는 0과 1로 이루어진 이진 코드이다. 이 언어는 사람이 이해하기 힘들다. 그렇기 때문에 사람의 언어와 기계어의 가교 역할을 하는 프로그래밍 언어가 필요하다.
+사람의 측면에서 프로그래밍 언어는 고급 언어와 저급 언어로 구분된다. 사람이 이해할 수 있는 언어에 가까우면 고급 언어(High Leve"
+        "wordCount": 158
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>팔로우:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/SungmanHan/SungmanHan.github.io" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/profile.php?id=100002890264687" target="_blank" rel="noopener">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://www.instagram.com/sungman_han/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/06/23/Java-Study-03/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">새로운</strong>
+        <p class="article-nav-title">
+        
+            Java Study 03
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/06/23/Java-Study-01/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">오래된</strong>
+        <p class="article-nav-title">Java Study 01</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">카테고리</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Github-hexo/">Github & hexo</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java-Concept/">Java Concept</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIP/">TIP</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">아카이브</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">6월 2019</a><span class="archive-list-count">10</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">태그 클라우드</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Disqus/" style="font-size: 10px;">Disqus</a> <a href="/tags/Dynamic-Loading/" style="font-size: 10px;">Dynamic Loading</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/JVM/" style="font-size: 10px;">JVM</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Multi-Thread/" style="font-size: 10px;">Multi Thread</a> <a href="/tags/busuanzi/" style="font-size: 10px;">busuanzi</a> <a href="/tags/counter/" style="font-size: 10px;">counter</a> <a href="/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo-counter/" style="font-size: 10px;">hexo counter</a> <a href="/tags/hexo-블로그/" style="font-size: 10px;">hexo 블로그</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/java-path/" style="font-size: 10px;">java path</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/markdown-syntax/" style="font-size: 10px;">markdown syntax</a> <a href="/tags/객체-지향/" style="font-size: 10px;">객체 지향</a> <a href="/tags/글쓰기-폼-수정/" style="font-size: 10px;">글쓰기 폼 수정</a> <a href="/tags/다양한-App-개발/" style="font-size: 10px;">다양한 App 개발</a> <a href="/tags/댓글/" style="font-size: 10px;">댓글</a> <a href="/tags/메모리-관리/" style="font-size: 10px;">메모리 관리</a> <a href="/tags/블로그-관리/" style="font-size: 10px;">블로그 관리</a> <a href="/tags/소셜-댓글/" style="font-size: 10px;">소셜 댓글</a> <a href="/tags/이식성/" style="font-size: 10px;">이식성</a> <a href="/tags/테마-적용/" style="font-size: 10px;">테마 적용</a> <a href="/tags/함수적-코딩/" style="font-size: 10px;">함수적 코딩</a>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <p>  &copy; 2019 Sungman Han
+                </p>
+                <p>
+                    Contact E-mail : hansung926@gmail.com
+                </p>
+                <p>
+                    <span id="busuanzi_container_site_pv">
+                      총 조회 : <span id="busuanzi_value_site_pv"></span> 회
+                    </span> |
+                    <span id="busuanzi_container_site_uv">
+                      총 방문자 : <span id="busuanzi_value_site_uv"></span> 명
+                    </span>
+                </p>
+
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+]
+
+        
+    
+    <script>
+    var disqus_shortname = 'hansungman';
+    
+    
+    var disqus_url = 'https://sungmanhan.github.io/2019/06/23/Java-Study-02/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

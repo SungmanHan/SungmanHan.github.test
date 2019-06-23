@@ -3,6 +3,97 @@
 
 
     <url>
+        <loc>https://sungmanhan.github.io/tags/JVM/</loc>
+        <lastmod>2019-06-23T13:19:45.021Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/Dynamic-Loading/</loc>
+        <lastmod>2019-06-23T13:19:17.634Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/Multi-Thread/</loc>
+        <lastmod>2019-06-23T13:19:17.634Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/%EB%8B%A4%EC%96%91%ED%95%9C-App-%EA%B0%9C%EB%B0%9C/</loc>
+        <lastmod>2019-06-23T13:19:17.634Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC/</loc>
+        <lastmod>2019-06-23T13:19:17.634Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/%ED%95%A8%EC%88%98%EC%A0%81-%EC%BD%94%EB%94%A9/</loc>
+        <lastmod>2019-06-23T13:19:17.634Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/%EA%B0%9D%EC%B2%B4-%EC%A7%80%ED%96%A5/</loc>
+        <lastmod>2019-06-23T13:19:17.634Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/%EC%9D%B4%EC%8B%9D%EC%84%B1/</loc>
+        <lastmod>2019-06-23T13:19:17.634Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/Java/</loc>
+        <lastmod>2019-06-23T13:19:17.634Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/java-path/</loc>
+        <lastmod>2019-06-23T13:11:56.565Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/eclipse/</loc>
+        <lastmod>2019-06-23T13:11:56.565Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/jdk/</loc>
+        <lastmod>2019-06-23T13:11:56.565Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sungmanhan.github.io/tags/java/</loc>
+        <lastmod>2019-06-23T13:11:56.565Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sungmanhan.github.io/tags/%EA%B8%80%EC%93%B0%EA%B8%B0-%ED%8F%BC-%EC%88%98%EC%A0%95/</loc>
         <lastmod>2019-06-23T12:58:52.701Z</lastmod>
         <changefreq>weekly</changefreq>
